@@ -276,7 +276,7 @@ struct SmartEquilibriumSolver::Impl
             {
                 const auto mu0 = predictor0.speciesChemicalPotentialReference(ispecies);
                 const auto mu1 = predictor0.speciesChemicalPotentialPredicted(ispecies, dw, dc);
-                if(abs(mu1 - mu0) >= options.reltol * abs(mu0) + options.abstol || isnan(mu0) || isnan(mu1))
+                if(abs(mu1 - mu0) >= options.reltol * abs(mu0) + options.abstol || std::isnan(mu0) || std::isnan(mu1))
                     return false;
             }
 

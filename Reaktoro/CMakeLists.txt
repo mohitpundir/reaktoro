@@ -39,6 +39,7 @@ target_link_libraries(Reaktoro
     PUBLIC phreeqc4rkt::phreeqc4rkt
     PUBLIC ThermoFun::ThermoFun
     PUBLIC tsl::ordered_map
+    PUBLIC spdlog::spdlog
 )
 
 # Enable implicit conversion of autodiff::real to double

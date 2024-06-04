@@ -41,6 +41,8 @@ ReaktoroFindPackage(tabulate 1.4.0 REQUIRED)
 ReaktoroFindPackage(ThermoFun 0.4.5 REQUIRED)
 ReaktoroFindPackage(tsl-ordered-map 1.0.0 REQUIRED)
 ReaktoroFindPackage(yaml-cpp 0.6.3 REQUIRED)
+ReaktoroFindPackage(spdlog 1.12.0 REQUIRED)
+
 
 # Optional dependencies
 ReaktoroFindPackage(Catch2 2.6.2)

@@ -59,9 +59,12 @@ if(${CMAKE_CXX_COMPILER_ID} STREQUAL MSVC)
     )
 endif()
 
+find_package(Python COMPONENTS Interpreter Development)
+find_program(PYBIND11_STUBGEN pybind11-stubgen)
+   
 # The relative path where site-packages directory is located for current platform
 execute_process(
-    COMMAND "${PYTHON_EXECUTABLE}" -c "if True:
+    COMMAND "${Python_EXECUTABLE}" -c "if True:
         from distutils import sysconfig as sc
         print(sc.get_python_lib(prefix='', plat_specific=True))"
     OUTPUT_VARIABLE PYTHON_SITE_PACKAGES_DIR
