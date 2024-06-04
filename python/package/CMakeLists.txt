@@ -1,6 +1,21 @@
 # Configure the setup.py.in and version.py.in files
-configure_file(setup.py.in ${CMAKE_CURRENT_BINARY_DIR}/setup.py)
-configure_file(version.py.in ${CMAKE_CURRENT_BINARY_DIR}/reaktoro/version.py)
+#configure_file(setup.py.in ${CMAKE_CURRENT_BINARY_DIR}/setup.py)
+#configure_file(version.py.in ${CMAKE_CURRENT_BINARY_DIR}/reaktoro/version.py)
+
+# Copy the reaktoro directory to the binary directory
+file(COPY . DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+
+# Define a variable with the name of the compiled python module file as defined by pybind11 (which is used in the file setup.py.in)
+#set(REAKTORO_PYTHON_MODULE_FILENAME PyReaktoro${PYTHON_MODULE_EXTENSION})
+
+# Configure the setup.py file
+set(SETUP_PY_IN ${CMAKE_CURRENT_SOURCE_DIR}/setup.py.in)
+set(SETUP_PY ${CMAKE_CURRENT_BINARY_DIR}/setup.py)
+
+# Configure the setup.py script with the provided CMake variables
+configure_file(${SETUP_PY_IN} ${SETUP_PY})
+
+
 
 # Create pybind11-stubgen command string depending if this program has been found or not
 if(PYBIND11_STUBGEN)
