@@ -1,0 +1,13 @@
+-- linux-ubuntu22.04-icelake / gcc@11.4.0 -----------------------
+chemicalfun@0.1.10
+eigen@3.4.0
+optima@0.5.0
+ordered-map@1.1.0
+phreeqc4rkt@3.6.2.2
+py-pip@23.1.2
+py-pybind11@2.12.0
+python@3.11.9
+spdlog@1.12.0
+tabulate@1.5
+thermofun@0.4.5
+yaml-cpp@0.7.0
